@@ -19,10 +19,10 @@ RUN apt-cache policy docker-engine
 RUN apt-get update
 RUN apt-get install -y docker-engine
 
-RUN sudo service docker start
+RUN service docker start
 RUN docker run hello-world
 
-RUN sudo groupadd docker
+RUN groupadd docker
 RUN gpasswd -a ${USER} docker
 
 RUN service docker restart
