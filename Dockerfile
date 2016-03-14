@@ -24,6 +24,7 @@ RUN service docker start
 # RUN docker run hello-world
 
 # RUN groupadd docker
+RUN useradd docker
 RUN gpasswd -a ${USER} docker
 
 # RUN service docker restart
