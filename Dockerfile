@@ -10,7 +10,7 @@ RUN cat /etc/apt/sources.list.d/docker.list
 
 # sudo rm /etc/apt/sources.list.d/docker.list
 
-# RUN echo "deb https://apt.dockerproject.org/repo debian-wheezy main" >> /etc/apt/sources.list.d/docker.list 
+RUN echo "deb `"https://apt.dockerproject.org/repo`" debian-wheezy main" >> /etc/apt/sources.list.d/docker.list 
 
 RUN apt-get update
 RUN apt-cache policy docker-engine
